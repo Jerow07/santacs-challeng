@@ -23,13 +23,13 @@ const [modelSelected, setModelSelected] =useState(0)
 const [typeSelected,setTypeSelected] = useState(0)
     
     return (<div className="grid mx-10   place-content-center gap-2 md:grid-cols-4  ">
-        <select onChange={(e)=>handleTypeChange(e)} className="border  border-2 border-slate-300  rounded-md" name="" id="">
+        <select onChange={(e)=>handleTypeChange(e)} className="border  border-2 border-slate-300  rounded-md" name="" id=""><option value="">Tipo de bien</option>
            { bienes.types ? bienes.types.map(type => (
             <option value={type.description} key={type.id}>{type.description}</option>
         )) : <option></option>} 
         </select> 
 
-        <select onChange={(e)=>handleModelChange(e)} className="border border-2 border-slate-300 rounded-md" name="" id="">
+        <select onChange={(e)=>handleModelChange(e)} className="border border-2 border-slate-300 rounded-md" name="" id=""><option value="">Marca</option>
             { bienes.types ? bienes.types[typeSelected].brands ? bienes.types[typeSelected].brands.map(brand => (
             <option value={brand.description} key={brand.id}>{brand.description}</option>
         )) : <option></option> : false }</select>  
@@ -41,7 +41,7 @@ const [typeSelected,setTypeSelected] = useState(0)
 
 
 
-        <select className="border border-2 border-slate-300 rounded-md" name="" id="">
+        <select className="border border-2 border-slate-300 rounded-md" name="" id=""><option value="">Modelo</option>
              { bienes.types ? bienes.types[typeSelected].brands[modelSelected].models ? bienes.types[typeSelected].brands[modelSelected].models.map(model => (
             <option value={model.description} key={model.id}>{model.description}</option>)) : <option></option> : false} </select>  
 
