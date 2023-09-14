@@ -1,6 +1,7 @@
 import { IconLine } from "./IconLine"
 import { IconCampaign } from "./IconCampaign"
 import { IconPower } from "./IconPower"
+import { IconPanel } from "./IconPanel"
 
 export const Header = () => {
     return (
@@ -15,8 +16,10 @@ export const Header = () => {
             </div>
             <div className="gap-2 flex m-5 justify-self-end">
                 <h2 className="font-bold text-cyan-600 hidden md:block	">Ir a panel</h2>
-                <IconCampaign></IconCampaign>
-                <IconPower></IconPower>
+                <div className="md:hidden">  <IconPanel></IconPanel></div>
+             <div>   <IconCampaign></IconCampaign></div>
+              <div >  <IconPower></IconPower></div>
+             
             </div>
         </div>
     )
